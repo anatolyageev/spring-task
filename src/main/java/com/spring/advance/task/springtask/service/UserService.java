@@ -1,11 +1,9 @@
 package com.spring.advance.task.springtask.service;
 
-import com.spring.advance.task.springtask.domain.PhoneNumber;
 import com.spring.advance.task.springtask.domain.User;
 import com.spring.advance.task.springtask.repository.PhoneNumberRepository;
 import com.spring.advance.task.springtask.repository.UserRepository;
 import java.util.List;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -18,9 +16,7 @@ public class UserService {
         this.phoneNumberRepository = phoneNumberRepository;
     }
 
-
-
-    public User getOne(Long id){
+    public User getOne(Long id) {
         return userRepository.getOne(id);
     }
 
@@ -35,6 +31,5 @@ public class UserService {
 
     public void save(List<User> users) {
         users.forEach(this::save);
-//        userRepository.saveAll(users);
     }
 }

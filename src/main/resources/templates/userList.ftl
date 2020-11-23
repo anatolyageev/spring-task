@@ -2,7 +2,6 @@
 <#import "parts/common.ftl" as c>
 
 <@c.page>
-
     <table border="1">
         <tr>
             <th>First Name</th>
@@ -21,7 +20,4 @@
             </#list>
         </#list>
     </table>
-
-
-
 </@c.page>

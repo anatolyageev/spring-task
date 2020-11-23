@@ -1,6 +1,5 @@
 package com.spring.advance.task.springtask.config;
 
-
 import javax.servlet.MultipartConfigElement;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;

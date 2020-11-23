@@ -36,5 +36,43 @@
         }
       }
     ]
+  },
+  {
+    "id": 3,
+    "name": "Anton",
+    "lastName": "Jagr",
+    "phoneNumbers": [
+      {
+        "number": "+380631239843",
+        "company": {
+          "name": "Lifecell"
+        }
+      },
+      {
+        "number": "+380501999898",
+        "company": {
+          "name": "Vodaphone"
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Dominic",
+    "lastName": "Gashek",
+    "phoneNumbers": [
+      {
+        "number": "+380631239553",
+        "company": {
+          "name": "Lifecell"
+        }
+      },
+      {
+        "number": "+380501993298",
+        "company": {
+          "name": "Vodaphone"
+        }
+      }
+    ]
   }
 ]
