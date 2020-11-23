@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Leanne",
+    "lastName": "Graham",
+    "phoneNumbers": [
+
+         {
+          "number": "+380631239856",
+          "company": {
+            "name": "Lifecell"
+          }
+        },
+         {
+          "number": "+380501239856",
+          "company": {
+            "name": "Vodaphone"
+          }
+        }
+
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Anatoly",
+    "lastName": "Ageev",
+    "phoneNumbers": [
+
+        {
+          "number": "+380731239856",
+          "company": {
+            "name": "Lifecell"
+          }
+        },
+         {
+          "number": "+380951239856",
+          "company": {
+            "name": "Vodaphone"
+          }
+        }
+
+    ]
+  }
+]
