@@ -7,17 +7,17 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Phone number</th>
-            <th>Company</th>
         </tr>
         <#list users as user>
-            <#list user.phoneNumbers as phone>
                 <tr>
                     <td>${user.name}</td>
                     <td>${user.lastName}</td>
-                    <td>${phone.number}</td>
-                    <td>${phone.company.name}</td>
+                    <td>
+                        <#list user.phoneNumbers as phone>
+                        ${phone.company.name} - ${phone.number};
+                        </#list>
+                    </td>
                 </tr>
-            </#list>
         </#list>
     </table>
 </@c.page>
