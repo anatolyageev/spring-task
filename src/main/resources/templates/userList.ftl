@@ -7,6 +7,7 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Phone number</th>
+            <th>User Role</th>
         </tr>
         <#list users as user>
                 <tr>
@@ -15,6 +16,11 @@
                     <td>
                         <#list user.phoneNumbers as phone>
                         ${phone.company.name} - ${phone.number};
+                        </#list>
+                    </td>
+                    <td>
+                        <#list user.roles as role>
+                            ${role.name}<#sep >,
                         </#list>
                     </td>
                 </tr>

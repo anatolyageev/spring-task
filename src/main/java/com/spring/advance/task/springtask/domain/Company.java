@@ -9,7 +9,6 @@ import lombok.Data;
 @Embeddable
 public class Company {
     private String name;
-
     public Company() {
     }
 }

@@ -8,11 +8,11 @@
     <p>You can use: demo@localhost / demo</p>
 
     <form role="form" action="/login" method="post">
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+<#--        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
 
         <div>
-            <label for="email">Email address</label>
-            <input type="email" name="email" id="email" required autofocus/>
+            <label for="username">User name</label>
+            <input type="text" name="username" id="username" required autofocus/>
         </div>
         <div>
             <label for="password">Password</label>
@@ -24,9 +24,4 @@
         </div>
         <button type="submit">Sign in</button>
     </form>
-
-    <#if error.isPresent()>
-        <p>The email or password you have entered is invalid, try again.</p>
-    </#if>
-
 </@c.page>
