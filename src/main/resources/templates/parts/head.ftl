@@ -41,6 +41,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="pdfreport">Export to PDF</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login page</a>
+            </li>
             <#if isAdmin>
                 <li class="nav-item">
                     <a class="nav-link" href="addUsers">Add Users</a>
@@ -48,6 +51,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="userList">User list</a>
                 </li>
+
             </#if>
 
         </ul>

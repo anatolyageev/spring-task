@@ -1,6 +1,5 @@
 package com.spring.advance.task.springtask.service;
 
-import com.spring.advance.task.springtask.domain.PhoneNumber;
 import com.spring.advance.task.springtask.domain.Role;
 import com.spring.advance.task.springtask.domain.User;
 import com.spring.advance.task.springtask.repository.PhoneNumberRepository;
@@ -60,7 +59,6 @@ public class UserService implements UserDetailsService {
 
     public void save(List<User> users) {
         users.forEach(this::save);
-//        userRepository.saveAll(users);
     }
     public List<User> usergtList(Long idMin) {
         return em.createQuery("SELECT u FROM User u WHERE u.id > :paramId", User.class)

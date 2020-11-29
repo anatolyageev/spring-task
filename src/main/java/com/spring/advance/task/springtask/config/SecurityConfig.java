@@ -2,16 +2,12 @@ package com.spring.advance.task.springtask.config;
 
 import com.spring.advance.task.springtask.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
@@ -19,9 +15,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     UserService userService;
-
-    private static final String ADMIN_ENDPOINT = "/api/v1/admin/**";
-    private static final String LOGIN_ENDPOINT = "/api/v1/auth/login";
 
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
@@ -34,8 +27,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf()
                     .disable()
                 .authorizeRequests()
-                    .antMatchers("/","/userList").permitAll()
-                    .antMatchers("/addUsers/**").hasRole("BOOKING_MANAGER")
+                    .antMatchers("/").permitAll()
+                    .antMatchers("/addUsers/**","/userList").hasRole("BOOKING_MANAGER")
+                    .antMatchers("/pdfreport").hasRole("REGISTERED_USER")
                     .anyRequest().fullyAuthenticated()
                     .and()
                 .formLogin()

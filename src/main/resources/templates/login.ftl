@@ -5,10 +5,9 @@
 
     <h1>Log in</h1>
 
-    <p>You can use: demo@localhost / demo</p>
+    <p>For test can be used login/password: demo / demo</p>
 
     <form role="form" action="/login" method="post">
-<#--        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
 
         <div>
             <label for="username">User name</label>
